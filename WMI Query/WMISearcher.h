@@ -7,7 +7,7 @@
 
 class CWMISearcher {
 public:
-    CWMISearcher(std::wstring namespaceName)
+	explicit CWMISearcher(std::wstring namespaceName)
         : namespace_name_(std::move(namespaceName)) {
         // Initialize COM library
         HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
